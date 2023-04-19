@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><testsuite errors="0" failures="1" name="feature to test google search functionality" skipped="0" tests="1" time="1.8" timestamp="2023-04-19 10:59:06"><testcase name="Validate google search is working"><failure message="Undefined default URL for page object PageObject" type="java.lang.AssertionError">Undefined default URL for page object PageObject</failure><system-err>Undefined default URL for page object PageObject&#13;
+StepDefinitions.GoogleSearchSteps.user_is_on_google_search_page(GoogleSearchSteps.java:22)&#13;
+✽.user is on google search page(file:///C:/Users/mauro.ibarrap_pragma/Documents/GitLab/PageObjectM/src/test/resources/features/GoogleSearch.feature:23)&#13;
+</system-err></testcase></testsuite>
