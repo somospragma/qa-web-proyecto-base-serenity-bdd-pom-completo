@@ -1,3 +1,0 @@
-"Story","Title","Result","Date","Stability","Duration (s)"
-"feature to test google search functionality","Validate google search is working","FAILURE","2023-04-19T10:59:06.242-05:00[America/Bogota]","0.0","1.8"
-"feature to test google search functionality","Validate google search is working","SUCCESS","2023-04-19T12:13:56.804-05:00[America/Bogota]","0.0","5.25"
