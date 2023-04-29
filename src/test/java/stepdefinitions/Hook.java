@@ -7,6 +7,7 @@ public class Hook {
 
     @Before
     public void setup(){
+
         WebDriverManager.chromedriver().setup();
     }
 }

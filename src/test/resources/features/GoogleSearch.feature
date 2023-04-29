@@ -18,9 +18,16 @@
 #Sample Feature Definition Template
 Feature: feature to test google search functionality
 
-  @tag2
+  @classic
   Scenario: Validate google search is working
     Given user is on google search page
     When user enters a text in search box
+    And hits enter
+    Then user is navigated to search results
+
+  @readSheetDocument
+  Scenario: Validate google search is working
+    Given user is on google search page
+    When user enters a text read on sheet in search box
     And hits enter
     Then user is navigated to search results

@@ -22,6 +22,12 @@ public class GoogleSearchSteps {
 		googlePageObject.writeOnSearchField("Automation Step by Step");
 	}
 
+	@Step("{0} user enters a text in search box")
+	@When("user enters a text read on sheet in search box")
+	public void user_enters_a_text_read_on_googleSheet_in_search_box() {
+		googlePageObject.readSheetAndWriteOnSearchField(0);
+	}
+
 	@Step("{0} user hits enter")
 	@When("hits enter")
 	public void hits_enter() {
