@@ -10,6 +10,7 @@ import io.cucumber.junit.CucumberOptions;
         features = "src/test/resources/features/GoogleSearch.feature"
         ,glue = {"stepdefinitions"}
         ,monochrome=true
+        ,tags = "@readDataOfDB"
         ,plugin= {"pretty", "json:target/JSONReports/report.json"}
 )
 public class TestRunner {

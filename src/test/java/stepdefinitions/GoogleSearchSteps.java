@@ -28,6 +28,12 @@ public class GoogleSearchSteps {
 		googlePageObject.readSheetAndWriteOnSearchField(0);
 	}
 
+	@Step("{0} user enters a text in search box")
+	@When("user enters a text read on DataBase in search box")
+	public void user_enters_a_text_read_on_dataBase_in_search_box() {
+		googlePageObject.readDBAndWriteOnSearchField(1);
+	}
+
 	@Step("{0} user hits enter")
 	@When("hits enter")
 	public void hits_enter() {
