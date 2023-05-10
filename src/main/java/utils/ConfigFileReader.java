@@ -10,30 +10,11 @@ public class ConfigFileReader {
 
     public ConfigFileReader(String filePath){
         propertyFilePath = filePath;
-
-        BufferedReader reader = null;
-        try {
-            reader = new BufferedReader(new FileReader(propertyFilePath));
+        try (BufferedReader reader = new BufferedReader(new FileReader(propertyFilePath))) {
             properties = new Properties();
-
-            try {
-                properties.load(reader);
-            }
-            catch (IOException e) {
-
-                e.printStackTrace(); }
-        }
-        catch (FileNotFoundException e) {
+            properties.load(reader);
+        } catch (IOException e) {
             throw new RuntimeException("Properties file not found at path : " + propertyFilePath);
-        }
-        finally {
-            try {
-                if(reader != null)
-                    reader.close();
-            }
-            catch (IOException ignore) {
-
-            }
         }
     }
 
@@ -65,8 +46,8 @@ public class ConfigFileReader {
         prop.store(new FileOutputStream(filename),null);
     }
 
-    public void setProperties(String key, String value) throws IOException {
+    public void setProperties(String filename,String key, String value) throws IOException {
         properties.setProperty(key, value);
-        //properties.store(new FileOutputStream(filename),null);
+        properties.store(new FileOutputStream(filename),null);
     }
 }
