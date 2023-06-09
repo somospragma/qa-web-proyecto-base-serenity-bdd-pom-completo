@@ -10,7 +10,7 @@ import org.openqa.selenium.interactions.Actions;
 import utils.GoogleSheetsReader;
 import utils.UtilConstants;
 import utils.data.AppDB;
-import utils.data.ConexionGestorDB;
+import utils.data.ConnectionManagerDB;
 import utils.data.QueriesConstants;
 
 import java.io.IOException;
@@ -60,14 +60,13 @@ public class GooglePageObject extends PageObject {
         ResultSet resultSet;
         HashMap<String,String> hashMap;
         try {
-            Connection connection = ConexionGestorDB.util().crearConexionMySql(MYSQL_URL,MYSQL_USER,MYSQL_PASSWORD);
+            Connection connection = ConnectionManagerDB.util().crearConexionMySql(MYSQL_URL,MYSQL_USER,MYSQL_PASSWORD);
             resultSet = AppDB.executeSelect(String.format(QueriesConstants.SELECT_DATA_SEARCH_VALUES_BY_ID,id),connection);
             hashMap = (HashMap<String, String>) AppDB.fillHashWithResultSetRecord(resultSet);
-            ConexionGestorDB.util().closeConnection(connection);
+            ConnectionManagerDB.util().closeConnection(connection);
         } catch (SQLException e) {
             throw new RuntimeException("error obteniendo valor de la base de datos, mensaje: " + e.getMessage());
         }
-
         enter(hashMap.get("value")).into(SEARCH_FIELD);
     }
 

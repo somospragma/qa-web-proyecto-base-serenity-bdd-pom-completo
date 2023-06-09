@@ -34,7 +34,7 @@ public class GoogleSheetsReader {
         return response.getValues();
     }
 
-    public static Sheets getSheetsService() throws  IOException, GeneralSecurityException{
+    private static Sheets getSheetsService() throws  IOException, GeneralSecurityException{
         Credential credential = authorize();
         return new Sheets.Builder(GoogleNetHttpTransport.newTrustedTransport(),GsonFactory.getDefaultInstance(), credential).setApplicationName(APPLICATION_NAME).build();
     }

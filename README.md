@@ -1,5 +1,18 @@
 # Arquetipo Serenity BDD POM
 
+## Consideraciones
+    - Para ejecutar la funcionalidad de prueba que implementa la utilidad de Base de Datos es importante 
+    que se instacie una Base de datos y se configura en el archivo de configuración ubicado en:
+        ./src/main/resources/configs/congig.properties
+
+    - La funcionalidad de prueba que implementa la utilidad de manejo de documentos de Google Sheet hace uso
+    de un documento de Google Sheet ubicado en el drive de Pragma, por ende las credenciasles que se encuentran
+    en: 
+        ./src/main/resources/credenciales.json
+    fueron generadas por un API de google creado bajo una cuenta de Pragma.
+
+    Dadas las consideraciones anteriores, la implementacion de las utilidades solo se encuentran expuestas a modo 
+    de ejemplo y unicamente funcionaran si se hacen las configuraciones pertinentes.
 
 ## Name
 Proyecto base de Serenity BDD con Page Object Model (POM)

@@ -9,14 +9,12 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class AppDB {
-    static Logger logger=Logger.getLogger(AppDB.class.getName());
+    private static Logger logger=Logger.getLogger(AppDB.class.getName());
     private static ResultSet resultSet = null;
     private static Statement statement;
     private static boolean result = false;
 
-    public AppDB(){
-        // Write document why this constructor is empty
-    }
+    private AppDB(){}
 
     public static ResultSet executeSelect(String strQuery, Connection conexion) throws SQLException
     {
@@ -85,6 +83,4 @@ public class AppDB {
         }
         return listRecords;
     }
-
-
 }

@@ -6,29 +6,29 @@ import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-public class ConexionGestorDB {
+public class ConnectionManagerDB {
 
-    Logger logger=Logger.getLogger(ConexionGestorDB.class.getName());
-    private Connection conexion;
+    Logger logger=Logger.getLogger(ConnectionManagerDB.class.getName());
+    private Connection connection;
 
 
-    public static ConexionGestorDB util(){return new ConexionGestorDB();}
+    public static ConnectionManagerDB util(){return new ConnectionManagerDB();}
 
     public Connection getConnection() {
-        return conexion;
+        return connection;
     }
 
     public void setConnection(Connection con) {
-        conexion = con;
+        connection = con;
     }
 
 
     public Connection crearConexionMySql(String strCon, String usr, String pwd) throws SQLException {
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
-            conexion = DriverManager.getConnection(strCon, usr, pwd);
+            connection = DriverManager.getConnection(strCon, usr, pwd);
             logger.log(Level.FINE, "Connection successful");
-            return conexion;
+            return connection;
         } catch (ClassNotFoundException | SQLException ex) {
             throw new RuntimeException("Falló la creación de la conexión con la BD de MySQL, error: "+ ex.getMessage());
         }
