@@ -3,7 +3,14 @@
 ## Consideraciones
     - Para ejecutar la funcionalidad de prueba que implementa la utilidad de Base de Datos es importante 
     que se instacie una Base de datos y se configura en el archivo de configuración ubicado en:
+        
         ./src/main/resources/configs/congig.properties
+
+        Si no desea realizar mayores ajustes al ejemplo puesto en el .feature nombre a la base de datos "arquetipo_serenity" y dentro de ella cree una tabla con el nombre "search_values". Dicha tabla debe tener dos columnas, la primera debe llamarse "id" y la segundo "value"
+
+        En las dependencias del proyecto esta agregada la dependencia del driver de MySQL, si no desea realizar mayores ajustes respecto al motor de BD use MySQL. Si desea usar otro motor, adiciones la dependencia del driver al build.gradle y configure este driver como observa se realizo para MySQL en: 
+        
+            ./src/main/java/utils/data/ConnectionManagerDB.java
 
     - La funcionalidad de prueba que implementa la utilidad de manejo de documentos de Google Sheet hace uso
     de un documento de Google Sheet ubicado en el drive de Pragma, por ende las credenciasles que se encuentran
