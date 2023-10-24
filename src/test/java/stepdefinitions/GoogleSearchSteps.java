@@ -3,7 +3,7 @@ package stepdefinitions;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import net.thucydides.core.annotations.Step;
+import net.serenitybdd.annotations.Step;
 import pages.GooglePageObject;
 
 public class GoogleSearchSteps {
