@@ -26,11 +26,17 @@ Feature: feature to test google search functionality
     Then user is navigated to search results
 
   @readSheetDocument
-  Scenario: Validate google search is working
+  Scenario Outline: Validate google search is working
     Given user is on google search page
-    When user enters a text read on sheet in search box
+    When user enters a text read on sheet in row <row> in search box
     And hits enter
     Then user is navigated to search results
+
+    Examples:
+    |row|
+    |0  |
+    |1  |
+    |2  |
 
   @readDataOfDB
   Scenario: Validate google search is working
@@ -38,3 +44,4 @@ Feature: feature to test google search functionality
     When user enters a text read on DataBase in search box
     And hits enter
     Then user is navigated to search results
+

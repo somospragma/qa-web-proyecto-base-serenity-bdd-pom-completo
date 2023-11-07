@@ -12,7 +12,6 @@ public class GoogleSearchSteps {
 	@Step("{0} opens browser on Google Page")
 	@Given("user is on google search page")
 	public void user_is_on_google_search_page() {
-//		google.navigateToGoogle();
 		googlePageObject.open();
 	}
 
@@ -23,9 +22,9 @@ public class GoogleSearchSteps {
 	}
 
 	@Step("{0} user enters a text in search box")
-	@When("user enters a text read on sheet in search box")
-	public void user_enters_a_text_read_on_googleSheet_in_search_box() {
-		googlePageObject.readSheetAndWriteOnSearchField(0);
+	@When("user enters a text read on sheet in row {word} in search box")
+	public void user_enters_a_text_read_on_googleSheet_in_search_box(String row) {
+		googlePageObject.readSheetAndWriteOnSearchField(Integer.parseInt(row));
 	}
 
 	@Step("{0} user enters a text in search box")
