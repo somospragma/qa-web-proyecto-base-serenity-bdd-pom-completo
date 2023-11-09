@@ -28,9 +28,9 @@ public class GoogleSearchSteps {
 	}
 
 	@Step("{0} user enters a text in search box")
-	@When("user enters a text read on DataBase in search box")
-	public void user_enters_a_text_read_on_dataBase_in_search_box() {
-		googlePageObject.readDBAndWriteOnSearchField(1);
+	@When("user enters a text read on DataBase in {word} in search box")
+	public void user_enters_a_text_read_on_dataBase_in_search_box(String id) {
+		googlePageObject.readDBAndWriteOnSearchField(Integer.parseInt(id));
 	}
 
 	@Step("{0} user hits enter")
