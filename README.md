@@ -2,8 +2,8 @@
 
 ## Consideraciones
 
-    - La conexion con la Base de Datos que esta ya configurada se hace con una DB MySQL online gratuita de db4free.net, 
-    las credenciales estan en el archivo de configuracion expuesto en el proximo punto.
+    - La conexion con la Base de Datos que esta ya configurada se hace con una DB MySQL online gratuita de db4free.net 
+    (https://www.db4free.net/signup.php), las credenciales estan en el archivo de configuracion expuesto en el proximo punto.
     
     - Para ejecutar la funcionalidad de prueba que implementa la utilidad de Base de Datos con una BD diferente a la configurada
     es importante que se instacie una Base de datos y se configure en el archivo de configuración la url de conexion, usuario
