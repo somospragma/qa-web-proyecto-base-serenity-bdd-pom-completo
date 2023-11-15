@@ -1,8 +1,8 @@
 package runners;
 
+import io.cucumber.junit.CucumberOptions;
 import net.serenitybdd.cucumber.CucumberWithSerenity;
 import org.junit.runner.RunWith;
-import io.cucumber.junit.CucumberOptions;
 
 @RunWith(CucumberWithSerenity.class)
 
@@ -10,10 +10,10 @@ import io.cucumber.junit.CucumberOptions;
         features = "src/test/resources/features/google_search.feature"
         ,glue = {"stepdefinitions"}
         ,monochrome=true
-        ,tags = "@readDataOfDB"
+        ,tags = "@readSheetDocument"
         ,plugin= {"pretty", "json:target/JSONReports/report.json"}
 )
-public class TestRunner {
+public class TestGSheetRunner {
 
 }
 
